@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-slider {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity .2s;
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.on {
+  opacity: 1;
+}
+
+#prev-button, #next-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#prev-button img, #next-button img {
+  width: 100%;
+  height: 100%;
+}
+
+#prev-button {
+  transform: rotate(180deg);
+}
+    </style>
+</head>
+<body>
+    <div class="container-slider">
+        <button id="prev-button"><img src="https://github.com/hirokirigaya/Tutoriais---Daniel-Ferreira/blob/vanilla-tutorial-slider/public/images/arrow.png?raw=true" alt="prev-button"></button>
+        <div class="container-images">
+          <img src="http://4.bp.blogspot.com/-pDT2K5MRSdQ/T74hjVPu6OI/AAAAAAAAAAQ/L30WDqUnjUY/s1600/plitvice.jpg" alt="lugar" class="slider on">
+          <img src="http://2.bp.blogspot.com/-PRIvsllgDZo/UrNeOKXftqI/AAAAAAAAA1Q/mJUzj7DzIkc/s1600/Ilhas_Maldivas_11.jpg" alt="lugar" class="slider">
+          <img src="https://cache.quantocustaviajar.com/blog/wp-content/uploads/2016/10/banff13.jpg" alt="lugar" class="slider">
+        </div>
+        <button id="next-button"><img src="https://github.com/hirokirigaya/Tutoriais---Daniel-Ferreira/blob/vanilla-tutorial-slider/public/images/arrow.png?raw=true" alt="next-button"></button>
+      </div>
+      <script>
+const slider = document.querySelectorAll('.slider');
+const btnPrev = document.getElementById('prev-button');
+const btnNext = document.getElementById('next-button');
+
+let currentSlide = 0;
+
+function hideSlider() {
+  slider.forEach(item => item.classList.remove('on'))
+}
+
+function showSlider() {
+  slider[currentSlide].classList.add('on')
+}
+
+function nextSlider() {
+  hideSlider()
+  if(currentSlide === slider.length -1) {
+    currentSlide = 0
+  } else {
+    currentSlide++
+  }
+  showSlider()
+}
+
+function prevSlider() {
+  hideSlider()
+  if(currentSlide === 0) {
+    currentSlide = slider.length -1
+  } else {
+    currentSlide--
+  }
+  showSlider()
+}
+
+btnNext.addEventListener('click', nextSlider)
+btnPrev.addEventListener('click', prevSlider)
+      </script>
+</body>
+</html>
