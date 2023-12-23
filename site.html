@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2? family= Heebo:wght@400;500;700 & family= Lato & family= Poppins:ital@1 & display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+nav {
+    background-color: #18929B;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+nav .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    font-weight: 600
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px
+}
+nav li {
+    margin-left: 7px;
+}
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s
+}
+nav li a:hover {
+    background-color: white;
+    color: #000
+}
+.banner {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://i.pinimg.com/originals/8c/d5/82/8cd5826bdafbfefa0120f3c2a983d0cc.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+.title {
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+ .subtitle {
+    color: white;
+    font-size: 58px;
+    font-weight: 600
+}
+ .buttons button {
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s
+}
+.text .buttons button.n-overlay {
+    color: white;
+    background: none;
+    border: 2px solid white;
+}
+.text .buttons button.n-overlay:hover {
+    color: #000;
+    background-color: white;
+}
+.text .buttons button.overlay {
+    background: white;
+    color: black;
+    animation: vibrar 0.5s ease-in-out infinite both
+}
+@keyframes vibrar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <strong>Site</strong>
+    </div>
+    <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">sobre</a></li>
+        <li><a href="">preços</a></li>
+        <li><a href="">serviços</a></li>
+        <li><a href="">contato</a></li>
+    </ul>
+</nav>
+<section class="banner">
+    <div class="text">
+    <h1 class="title">crie um site incrível</h1>
+    <h2 class="subtitle">usando html e css puros</h2>
+    <br>
+    <div class="buttons">
+        <button class="n-overlay">Inscrever</button>
+        <button class="overlay">Saiba mais</button>
+    </div>
+</div>
+</section>
+</body>
+</html>
