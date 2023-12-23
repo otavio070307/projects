@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instagram logo</title>
+        <meta charset="UTF-8"/>
+        <meta http-eqiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <style>
+
+div {
+    width: 20em;
+    height: 20em;
+    color: #fff;
+    background: radial-gradient(circle at 33% 100%,yellow,orangered,
+    crimson,purple,royalblue);
+    border-radius: 30%;
+    position: relative;
+    top: 200px;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div::before {
+    content: " ";
+    border: 1em solid;
+    border-radius: 30%;
+    width: 12.5rem;
+    height: 12.5rem;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+div::after {
+    content: " ";
+    border: 1em solid;
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    inset: 0;
+    margin: auto
+}
+span {
+    border: 1em solid;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5em;
+    right: 5em;
+}
+</style>
+<body>
+    <div><span></span></div>
+</body>
+</html>
+
+
