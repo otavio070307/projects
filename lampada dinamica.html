@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada dinamica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+    header,main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    width: 80px;
+    background-color: #F45C;
+    border: 0;
+    outline: none;
+    color: black;
+    height: 30px;
+    border-radius: 4px;
+    padding: 5px 5px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VANILLA JS</h1>
+    </header>
+    <main>
+        <div>
+            <img src="" alt="Lâmpada" id='lamp' height="120" width="110">
+        </div>
+        <div>
+            <button id='turnOn'>Ligar</button>
+            <button id='turnOff'>Desligar</button>
+        </div>
+    </main>
+    <script>
+const turnOn = document.getElementById ( 'turnOn' );
+const turnOff = document.getElementById ( 'turnOff' );
+const lamp = document.getElementById ( 'lamp' );
+
+function isLampBroken () {
+    return lamp.src.indexOf ( 'quebrada' ) > -1
+}
+
+function lampOn () {
+    if ( !isLampBroken () ) {
+        lamp.src = 'https://github.com/fernandoleonid/mini-projetos-js/blob/master/01-lamp/img/ligada.jpg?raw=true';
+    }
+}
+
+function lampOff () {
+    if ( !isLampBroken () ) {
+        lamp.src = 'https://github.com/fernandoleonid/mini-projetos-js/blob/master/01-lamp/img/desligada.jpg?raw=true';
+    }
+}
+
+function lampBroken () {
+    lamp.src = 'https://github.com/fernandoleonid/mini-projetos-js/blob/master/01-lamp/img/quebrada.jpg?raw=true';
+}
+
+turnOn.addEventListener ( 'click', lampOn );
+turnOff.addEventListener ( 'click', lampOff );
+lamp.addEventListener ( 'mouseover', lampOn );
+lamp.addEventListener ( 'mouseleave', lampOff );
+lamp.addEventListener ( 'dblclick', lampBroken );
+    </script> 
+</body>
+</html>

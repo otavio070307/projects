@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios do dia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-weight: 300
+}
+#msg {
+    text-align: center;
+}
+section {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 15px gray;
+}
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+            Aqui vai aparecer a mensagem...
+        </div>
+        <div id="foto">
+            <img src="https://www.angelsimon.com/wp-content/uploads/sites/7/2021/02/AdobeStock_216048148.jpeg" alt="fotomanha" id="img">
+        </div>
+    </section>
+    <footer>
+        <p>Modelo</p>
+    </footer>
+    <script>
+        function carregar() {
+    var msg = window.document.getElementById('msg')
+    var img = window.document.getElementById('img')
+    var data = new Date()
+    var hora = data.getHours()
+    msg.innerHTML = `agora são ${hora} horas`
+    if (hora >= 0 && hora < 12) {
+        img.src = "https://www.angelsimon.com/wp-content/uploads/sites/7/2021/02/AdobeStock_216048148.jpeg"
+        document.body.style.backgroundColor = '#e2cd5f'
+    }else if (hora >= 12 && hora < 18) {
+        img.src= 'https://tse3.mm.bing.net/th?id=OIP.vZzZfHvHmk2NHK_KoRJAiAHaFN&pid=Api&P=0&h=180'
+        document.body.style.backgroundColor = '#ff4500'
+    }else {
+        img.src = 'https://tse2.mm.bing.net/th?id=OIP.MWveD3H_lu2XLJCqCKqduAHaE8&pid=Api&P=0&h=180'
+        document.body.style.backgroundColor = '#515154'
+    }
+        }
+    </script>
+</body>
+</html>
