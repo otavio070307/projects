@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+main {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+#value {
+    background: #fff;
+    color: #000;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+}
+button {
+    border: none;
+    width: 150px;
+    height: 56px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3cBF23;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <span id="value">0</span>
+        <button onclick="onIncrement()">+</button>
+        <button onclick="onDecrement()">-</button>
+    </main>
+    <script>
+const value = document.querySelector('#value');
+
+function onIncrement() {
+    value.innerHTML = `${parseInt(value.innerText) + 1}`
+}
+function onDecrement() {
+    value.innerHTML = `${parseInt(value.innerText) - 1}`
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+* {
+   margin: 0; 
+   padding: 0;
+   font-family: sans-serif;
+   box-sizing: border-box
+}
+a {
+   text-decoration: none; 
+}
+ul {
+    list-style: none;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif
+}
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+.blog-heading span {
+    color: #f33c3c  
+}
+.blog-heading h3 {
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    font-weight: 600
+}
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap
+}
+.blog-box {
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    margin: 20px
+}
+.blog-img {
+    width: 100%;
+    height: auto
+}
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center
+}
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column
+}
+.blog-text span {
+    color: #f33c3c;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727
+}
+.blog-text .blog-title:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s
+}
+.blog-text p {
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a {
+    color: #0f0f0f   
+}
+.blog-text a:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+@media (max-width: 1250px) {
+    .blog-box {
+        width: 300px;
+    }
+}
+@media (max-width: 1100px) {
+    .blog-box {
+        width: 70%;
+    }
+}
+@media(max-width: 550px) {
+    .blog-box {
+        margin: 20px 10px;
+        width: 100%
+    }
+}
+#blog {
+    padding: 20px
+}
+    </style>
+</head>
+<body>
+    <section id="blog">
+        <div class="blog-heading">
+            <span>My recent Posts</span>
+            <h1>Cards</h1>
+        </div>
+
+        <div class="blog-container">
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.o-HFPpGWyWW7I_EdNQYwMgHaEo&pid=Api&P=0&h=180">
+                </div>
+                <div class="blog-img">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.YStozDiRWuUlT8T9Tmo45QHaEo&pid=Api&P=0&h=180">
+                </div>
+                <div class="blog-img">
+                    <img src="https://www.infoescola.com/wp-content/uploads/2017/04/leao-126767138.jpg">
+                </div>
+
+                <div class="blog-text">
+                    <span>18 July 2021 / Web Design</span>
+                    <a href="" class="blog-title">What Has Happened of All of the web design ideas</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel libero aliquam quas, nam laboriosam cum aliquid eligendi saepe explicabo delectus debitis facere error voluptatem accusantium sint impedit deserunt illo alias!</p>
+                    <a href="">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
