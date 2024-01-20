@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phosphor</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #226;
+    animation: flame 2s linear infinite
+}
+.red {
+    position: absolute;
+    border-radius: 50% 0 50% 50%;
+    width: 85px;
+    height: 85px;
+    background-color: orangered;
+    transform: rotate(-43deg);
+    box-shadow: 0 0 15px orange,
+    0 0 25px orange,
+    0 0 35px orange,
+    0 0 45px orange,
+    0 0 55px orange,
+    0 0 65px orange;
+}
+.yellow {
+    position: absolute;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-43deg);
+    width: 65px;
+    height: 65px;
+    background-color: yellow;
+}
+.lightyellow {
+    position: absolute;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-43deg);
+    width: 45px;
+    height: 45px;
+    bottom: 310px;
+    background-color: lightyellow;
+}
+.blue {
+    position: absolute;
+    transform: rotate(-43deg);
+    bottom: 305px;
+    border-radius: 50% 0 50% 50%;
+    width: 25px;
+    height: 25px;
+    background-color: royalblue;
+}
+.toothpick {
+    width: 5px;
+    height: 200px;
+    position: relative;
+    background-color: burlywood;
+    top: 130px;
+    border-radius: 3px
+}
+    </style>
+</head>
+<body>
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="lightyellow"></div>
+        <div class="blue"></div>
+        <div class="toothpick"></div>
+</body>
+</html>
